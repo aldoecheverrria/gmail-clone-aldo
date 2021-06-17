@@ -4,6 +4,7 @@ import { Button } from  '@material-ui/core';
 import AddIcon from '@material-ui/icons/Add';
 import SidebarOption from './SidebarOption';
 import InboxIcon from "@material-ui/icons/Inbox";
+import StarIcon from "@material-ui/icons/Star"
 
 function Sidebar() {
   return (
@@ -19,7 +20,14 @@ function Sidebar() {
         Icon={InboxIcon}
         title="Inbox"
         number={54}
+        selected={true}
       />
+      <SidebarOption
+        Icon={StarIcon}
+        title="Starred"
+        number={54}
+      />
+
     </div>
   );
 }
