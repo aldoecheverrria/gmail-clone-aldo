@@ -8,7 +8,7 @@ function SidebarOption({Icon, title, number, selected}) {
             <h3>{title}</h3>
             <p>{number}</p>
         </div>
-    )
+    );
 }
 
 export default SidebarOption;
