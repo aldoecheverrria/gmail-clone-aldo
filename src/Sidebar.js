@@ -10,6 +10,11 @@ import LabelImportantIcon from "@material-ui/icons/LabelImportant";
 import NearMeIcon from "@material-ui/icons/Note";
 import NoteIcon from "@material-ui/icons/Note";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore"
+import PersonIcon from "@material-ui/icons/Person";
+import DuoIcon from "@material-ui/icons/Duo";
+import PhoneIcon from "@material-ui/icons/Phone";
+import { IconButton } from '@material-ui/core';
+
 
 function Sidebar() {
   return (
@@ -63,6 +68,19 @@ function Sidebar() {
         number={54}
         selected={false}
       />
+      <div className="sidebar__footer">
+        <div className="sidebar__footerIcons">
+          <IconButton>
+            <PersonIcon/>
+          </IconButton>
+          <IconButton>
+            <DuoIcon/>
+          </IconButton>
+          <IconButton>
+            <PhoneIcon/>
+          </IconButton>
+        </div>
+      </div>
 
     </div>
   );
