@@ -23,6 +23,7 @@ function Header() {
                 <ArrowDropDownIcon className="header__inputCaret"/>
             </div>
             <div className="header__right">
+          
             <IconButton>
             <AppsIcon/>
           </IconButton>
