@@ -56,6 +56,12 @@ function EmailList() {
                 <EmailRow 
                 title="We got something for you"
                 subject="this is serious!"
+                description="this is NOT a test, this is really serious and not a spam!"
+                time="10pm"
+                />
+                <EmailRow 
+                title="We got something for you"
+                subject="this is serious!"
                 description="this is NOT a test"
                 time="10pm"
                 />
