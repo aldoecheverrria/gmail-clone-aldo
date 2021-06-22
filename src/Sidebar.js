@@ -29,7 +29,7 @@ function Sidebar() {
       <SidebarOption
         Icon={InboxIcon}
         title="Inbox"
-        number={54}
+        number={53}
         selected={true}
       />
       <SidebarOption
