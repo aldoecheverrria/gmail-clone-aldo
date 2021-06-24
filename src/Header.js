@@ -19,7 +19,7 @@ function Header() {
             </div>
             <div className="header__middle">
                 <SearchIcon/>
-                <input placeholder='Busca algun correo... clone in alpha by Aldo, stay tuned!' type="text"/>
+                <input placeholder='Busca algun correo... clone gmail en alfa por Aldo, stay tuned!' type="text"/>
                 <ArrowDropDownIcon className="header__inputCaret"/>
             </div>
             <div className="header__right">

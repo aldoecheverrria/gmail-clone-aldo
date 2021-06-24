@@ -29,7 +29,7 @@ function App() {
         </Switch>
       </div>
       
-      <h1>Este será el clon de Gmail</h1>
+
     </div>
     </Router>
   );

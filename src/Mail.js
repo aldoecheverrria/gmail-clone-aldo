@@ -75,7 +75,20 @@ function Mail() {
                 </div>
 
             </div>
-            <h1>This is a test of react-router! you can go back to  home, using browser buttons for now...</h1>
+            <div className="mail__body">
+                <div className="mail__bodyHeader">
+                    <h2>Asunto: esta es una prueba de correo</h2>
+                    <LabelImportantIcon className="mail__important" />
+                    <p>Título</p>
+                    <p className="mail__time">10pm</p>
+                </div>
+                <div className="mail__message">
+                <p>This is a test of react-router! you can go back to  home, using the back button!...
+                Esta es una prueba de react-router!, puedes regresar a home usando el botón de atrás!...
+                </p>
+                </div>
+            </div>
+     
         </div>
     )
 }

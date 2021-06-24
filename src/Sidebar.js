@@ -24,47 +24,47 @@ function Sidebar() {
         className="sidebar__compose"
        
       >
-        Compose
+        Redactar
       </Button>
       <SidebarOption
         Icon={InboxIcon}
-        title="Inbox"
+        title="Recibidos"
         number={53}
         selected={true}
       />
       <SidebarOption
         Icon={StarIcon}
-        title="Starred"
+        title="Destacados"
         number={54}
         selected={false}
       />
       <SidebarOption
         Icon={AccessTimeIcon}
-        title="Snoozed"
+        title="Pospuestos"
         number={54}
         selected={false}
       />
       <SidebarOption
         Icon={LabelImportantIcon}
-        title="Important"
+        title="Importantes"
         number={54}
         selected={false}
       />
       <SidebarOption
         Icon={NearMeIcon}
-        title="Sent"
+        title="Enviados"
         number={54}
         selected={false}
       />
       <SidebarOption
         Icon={NoteIcon}
-        title="Drafts"
+        title="Borradores"
         number={54}
         selected={false}
       />
       <SidebarOption
         Icon={ExpandMoreIcon}
-        title="More"
+        title="Más"
         number={54}
         selected={false}
       />
