@@ -35,37 +35,37 @@ function Sidebar() {
       <SidebarOption
         Icon={StarIcon}
         title="Destacados"
-        number={54}
+        number={12}
         selected={false}
       />
       <SidebarOption
         Icon={AccessTimeIcon}
         title="Pospuestos"
-        number={54}
+        number={34}
         selected={false}
       />
       <SidebarOption
         Icon={LabelImportantIcon}
         title="Importantes"
-        number={54}
+        number={2}
         selected={false}
       />
       <SidebarOption
         Icon={NearMeIcon}
         title="Enviados"
-        number={54}
+        number={65}
         selected={false}
       />
       <SidebarOption
         Icon={NoteIcon}
         title="Borradores"
-        number={54}
+        number={13}
         selected={false}
       />
       <SidebarOption
         Icon={ExpandMoreIcon}
         title="Más"
-        number={54}
+        number={23}
         selected={false}
       />
       <div className="sidebar__footer">
