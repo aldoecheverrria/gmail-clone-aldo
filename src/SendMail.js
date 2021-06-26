@@ -19,7 +19,7 @@ function SendMail() {
     return (
       <div className="sendMail">
         <div className="sendMail__header">
-          <h3>New Message</h3>
+          <h3>Nuevo correo</h3>
           <CloseIcon
             
             className="sendMail__close"
@@ -29,7 +29,7 @@ function SendMail() {
         <form onSubmit={handleSubmit(onSubmit)}>
           <input
             name="to"
-            placeholder="To"
+            placeholder="Para"
             type="email"
             {...register("to", {
               required: "Required",
@@ -39,24 +39,24 @@ function SendMail() {
   
           <input
             name="subject"
-            placeholder="Subject"
+            placeholder="Asunto"
             type="text"
             {...register("subject", {
               required: "Required",
             })}
           />
-          {errors.subject && <p className="sendMail__error">Destinatario requerido</p>}
+          {errors.subject && <p className="sendMail__error">Asunto requerido</p>}
   
           <input
             name="message"
-            placeholder="Message..."
+            placeholder="Cuerpo del mensaje..."
             type="text"
             className="sendMail__message"
             {...register("message", {
               required: "Required",
             })}
           />
-         {errors.message && <p className="sendMail__error">Destinatario requerido</p>}
+         {errors.message && <p className="sendMail__error">Mensaje requerido</p>}
   
           <div className="sendMail__options">
             <Button
@@ -65,7 +65,7 @@ function SendMail() {
               color="primary"
               type="submit"
             >
-              Send
+              Enviar
             </Button>
           </div>
         </form>
