@@ -6,30 +6,71 @@ import './SendMail.css'
 
 
 function SendMail() {
-    return (
-        <div className="sendMail">
-            <div className="sendMail__header">
-                <h3>New Message</h3>
-                <CloseIcon className="sendMail__close"/>
-            </div>
-          <form>
-              <input placeholder="Para" type="text"/>
-              <input placeholder="Asunto" type="text"/>
-              <input 
-                placeholder="Mensaje..." 
-                type="text"
-                className="sendMail__message"/>
-              <div className="sendMail__options">
-                <Button 
-                className="sendMail__send"
-                variant="contained"
-                color="primary"
-                type="submit"
-                >Send</Button>
-              </div>
-          </form>
-        </div>
-    )
-}
 
-export default SendMail
+  const { register, handleSubmit, watch, formState: {errors} } = useForm();
+
+  const onSubmit = (formData) => {
+    console.log(formData);
+    
+    };
+
+  
+
+    return (
+      <div className="sendMail">
+        <div className="sendMail__header">
+          <h3>New Message</h3>
+          <CloseIcon
+            
+            className="sendMail__close"
+          />
+        </div>
+  
+        <form onSubmit={handleSubmit(onSubmit)}>
+          <input
+            name="to"
+            placeholder="To"
+            type="email"
+            {...register("to", {
+              required: "Required",
+            })}
+          />
+          {errors.to && <p className="sendMail__error">Destinatario requerido</p>}
+  
+          <input
+            name="subject"
+            placeholder="Subject"
+            type="text"
+            {...register("subject", {
+              required: "Required",
+            })}
+          />
+          {errors.subject && <p className="sendMail__error">Destinatario requerido</p>}
+  
+          <input
+            name="message"
+            placeholder="Message..."
+            type="text"
+            className="sendMail__message"
+            {...register("message", {
+              required: "Required",
+            })}
+          />
+         {errors.message && <p className="sendMail__error">Destinatario requerido</p>}
+  
+          <div className="sendMail__options">
+            <Button
+              className="sendMail__send"
+              variant="contained"
+              color="primary"
+              type="submit"
+            >
+              Send
+            </Button>
+          </div>
+        </form>
+      </div>
+    );
+  }
+  
+  export default SendMail;
