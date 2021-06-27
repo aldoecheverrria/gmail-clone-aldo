@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import ArrowDropDown from '@material-ui/icons/ArrowDropDown';
 import RedoIcon from "@material-ui/icons/Redo";
 import MoreVertIcon from "@material-ui/icons/MoreVert";
@@ -13,10 +13,26 @@ import LocalOfferIcon from "@material-ui/icons/LocalOffer";
 import Section from './Section';
 import './EmailList.css'
 import EmailRow from './EmailRow';
+import { db } from './firebase';
 
 
 
 function EmailList() {
+    
+    const [emails, setEmails] = useState([]);
+
+    useEffect(() => {
+        db.collection("emails")
+            .orderBy("timestamp", "desc")
+            .onSnapshot((snapshot) =>
+                setEmails (
+                    snapshot.docs.map((doc) =>({
+                        id: doc.id,
+                        data: doc.data(),
+                    }))
+                )
+            );
+    }, []);
     return (
         <div className='emailList'>
             <div className="emailList__settings">
@@ -53,6 +69,16 @@ function EmailList() {
                 <Section Icon={LocalOfferIcon} title="Promotions" color="green" />
             </div>
             <div className="emailList__list">
+                {emails.map(({ id, data: { to, subject, message, timestamp
+                }}) => (
+                    <EmailRow 
+                        id={id}
+                        key={id}
+                        title={to}
+                        description={message}
+                        time={new Date(timestamp?.seconds * 1000).toUTCString()}
+                    />
+                )) }
                 <EmailRow 
                 title="We got something for you"
                 subject="this is serious!"
