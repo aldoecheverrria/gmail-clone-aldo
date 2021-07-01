@@ -14,11 +14,14 @@ import PrintIcon from "@material-ui/icons/Print";
 import ExitToAppIcon from "@material-ui/icons/ExitToApp";
 import { IconButton } from '@material-ui/core';
 import {useHistory} from "react-router-dom";
+import {selectOpenMail} from './features/mailSlice';
+import { useSelector } from 'react-redux';
 
 
 function Mail() {
 
     const history = useHistory();
+    const selectedMail = useSelector(selectOpenMail);
 
     return (
         <div className="mail">
@@ -77,15 +80,13 @@ function Mail() {
             </div>
             <div className="mail__body">
                 <div className="mail__bodyHeader">
-                    <h2>Asunto: esta es una prueba de correo</h2>
+                    <h2>{selectedMail?.subject}</h2>
                     <LabelImportantIcon className="mail__important" />
-                    <p>Título</p>
-                    <p className="mail__time">10pm</p>
+                    <p>{selectedMail?.title}</p>
+                    <p className="mail__time">{selectedMail?.time}</p>
                 </div>
                 <div className="mail__message">
-                <p>This is a test of react-router! you can go back to  home, using the back button!...
-                Esta es una prueba de react-router!, puedes regresar a home usando el botón de atrás!...
-                </p>
+                    <p>{selectedMail?.description}</p>
                 </div>
             </div>
      
